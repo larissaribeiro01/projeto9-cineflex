@@ -10,13 +10,11 @@ export default function Movies(props){
     
     useEffect(() => {
         const promise = axios.get("https://mock-api.driven.com.br/api/v5/cineflex/movies");
-
         promise.then(response => setData(response.data));
         promise.catch( error => console.log(error)); 
         
     }, [setData]);
 
-    
 
     return(
         <nav>
@@ -33,3 +31,5 @@ export default function Movies(props){
 
 }
 
+
+ 

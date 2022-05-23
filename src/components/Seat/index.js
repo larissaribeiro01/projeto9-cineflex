@@ -5,13 +5,7 @@ import axios from "axios";
 
 export default function Seat(props){
 
-    const {choosenDataSeat,
-            setChoosenDataSeat, 
-            cpf,
-            setCpf,
-            nome, 
-            setNome,
-            setMovie} = props
+    const {choosenDataSeat, setChoosenDataSeat, cpf, setCpf, nome,  setNome, setMovie} = props
 
     const {idSession} = useParams();
     const [seats, setSeats] = useState({});

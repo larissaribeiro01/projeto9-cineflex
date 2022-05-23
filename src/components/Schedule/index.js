@@ -22,28 +22,28 @@ export default function Schedule(){
                 <p>Selecione o horário</p>
             </div>
             <div className="main">
-            {!schedule.days ? null: schedule.days.map( (day) => {
-                return(
-                    <>
-                        <div key={day.id} className="schedules">
-                            <div className="day" >
-                                <p> {day.weekday} - {day.date} </p>
-                                <div className="time-options">
-                                    {day.showtimes.map ( (showtime) =>{
-                                        return(
-                                           <Link to={`/sessao/${showtime.id}`}><div className="time" key={showtime.id}>{showtime.name}</div></Link> 
-                                        )
-                                    })}
+                {!schedule.days ? null: schedule.days.map( (day) => {
+                    return(
+                        <>
+                            <div key={day.id} className="schedules">
+                                <div className="day" >
+                                    <p> {day.weekday} - {day.date} </p>
+                                    <div className="time-options">
+                                        {day.showtimes.map ( (showtime) =>{
+                                            return(
+                                            <Link to={`/sessao/${showtime.id}`}><div className="time" key={showtime.id}>{showtime.name}</div></Link> 
+                                            )
+                                        })}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                       
-                    </>
-                )
-            })}
+                        
+                        </>
+                    )
+                })}
             </div>
             
-             <footer>
+            <footer>
                 <div className="footer-content">
                     <div className="footer-movie">
                         <img src={schedule.posterURL} alt={schedule.title}/>

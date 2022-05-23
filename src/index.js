@@ -3,4 +3,4 @@ import App from "./components/App";
 
 
 
-ReactDOM.unstable_renderSubtreeIntoContainer(<App />, document.querySelector(".root"))
+ReactDOM.render(<App />, document.querySelector(".root"))
